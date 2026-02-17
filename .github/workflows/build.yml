@@ -32,8 +32,9 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     strategy:
       matrix:
-        VERSION: ['23.05', '24.10']
-        SET: [docker, non-docker]
+        VERSION: ['24.10']
+        CPU: [rk3568]
+        SET: [non-docker]
 
     steps:
     - name: Checkout
